@@ -184,6 +184,11 @@ a:focus, a:hover {
   padding-bottom: 150px;
 }
 
+.about-section {
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+
 .download-section {
   color: white;
   background: url("../img/another-bg-darkest-contrast.jpg") no-repeat center center scroll;
@@ -192,6 +197,8 @@ a:focus, a:hover {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  padding-top: 75px;
+  padding-bottom: 150px;
 }
 
 #map {
