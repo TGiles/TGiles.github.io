@@ -54,40 +54,6 @@ gulp.src([
   done();
 }));
 
-// gulp.task('vendor', function vendor_ () {
-
-//   // Bootstrap
-//   gulp.src([
-//       './node_modules/bootstrap/dist/**/*',
-//       '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
-//       '!./node_modules/bootstrap/dist/css/bootstrap-reboot*'
-//     ])
-//     .pipe(gulp.dest('./vendor/bootstrap'))
-
-//   // Font Awesome
-//   gulp.src([
-//       './node_modules/font-awesome/**/*',
-//       '!./node_modules/font-awesome/{less,less/*}',
-//       '!./node_modules/font-awesome/{scss,scss/*}',
-//       '!./node_modules/font-awesome/.*',
-//       '!./node_modules/font-awesome/*.{txt,json,md}'
-//     ])
-//     .pipe(gulp.dest('./vendor/font-awesome'))
-
-//   // jQuery
-//   gulp.src([
-//       './node_modules/jquery/dist/*',
-//       '!./node_modules/jquery/dist/core.js'
-//     ])
-//     .pipe(gulp.dest('./vendor/jquery'))
-
-//   // jQuery Easing
-//   gulp.src([
-//       './node_modules/jquery.easing/*.js'
-//     ])
-//     .pipe(gulp.dest('./vendor/jquery-easing'))
-
-// });
 
 // Compile SCSS
 gulp.task('css:compile', function() {
