@@ -1,3 +1,21 @@
 // Variables
 
-$primary: #42DCA3;
+$primary: #34C4C8;
+
+// Sizing variables
+$base    : 1rem;
+$base-75 : $base * 0.75;
+$base-50 : $base * 0.50;
+$base-25 : $base * 0.25;
+$base-125: $base * 1.25;
+$base-150: $base * 1.50;
+$base-175: $base * 1.75;
+$base-200: $base * 2.00;
+$base-225: $base * 2.25;
+$base-250: $base * 2.50;
+$base-275: $base * 2.75;
+$base-300: $base * 3.00;
+
+$base-font : $base-125;
+
+$btn-default_border : $base-25 solid $primary;
