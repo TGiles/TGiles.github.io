@@ -35,8 +35,10 @@
         "browser-sync": "^2.26.3",
         "gulp": "^4.0.0",
         "gulp-clean-css": "3.9.2",
+        "gulp-gzip": "^1.4.2",
         "gulp-header": "2.0.1",
         "gulp-rename": "^1.2.2",
+        "gulp-responsive": "^2.13.0",
         "gulp-sass": "^3.1.0",
         "gulp-uglify": "3.0.0",
         "popper.js": "^1.14.7"
