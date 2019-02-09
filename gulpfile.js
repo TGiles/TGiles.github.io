@@ -9,6 +9,11 @@ var gzip = require('gulp-gzip');
 var responsiveImages = require('gulp-responsive');
 var browserSync = require('browser-sync').create();
 
+var cleanCSSobj = {level: {
+  2: {
+    all: true
+  }
+}};
 // Copy third party libraries from /node_modules into /vendor
 
 function vendor(done) {
@@ -18,33 +23,19 @@ function vendor(done) {
       '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
       '!./node_modules/bootstrap/dist/css/bootstrap-reboot*'
     ])
-    // .pipe(gzip())
     .pipe(gulp.dest('./vendor/bootstrap'))
-  
-  // Font Awesome
-  gulp.src([
-      './node_modules/font-awesome/**/*',
-      '!./node_modules/font-awesome/{less,less/*}',
-      '!./node_modules/font-awesome/{scss,scss/*}',
-      '!./node_modules/font-awesome/.*',
-      '!./node_modules/font-awesome/*.{txt,json,md}'
-    ])
-    // .pipe(gzip())
-    .pipe(gulp.dest('./vendor/font-awesome'))
   
   // jQuery
   gulp.src([
       './node_modules/jquery/dist/*',
       '!./node_modules/jquery/dist/core.js'
     ])
-    // .pipe(gzip())
     .pipe(gulp.dest('./vendor/jquery'))
   
   // jQuery Easing
   gulp.src([
       './node_modules/jquery.easing/*.js'
     ])
-    // .pipe(gzip())
     .pipe(gulp.dest('./vendor/jquery-easing'))
   
     done();
@@ -83,11 +74,10 @@ function css_minify() {
     './css/*.css',
     '!./css/*.min.css'
   ])
-    .pipe(cleanCSS())
+    .pipe(cleanCSS(cleanCSSobj))
     .pipe(rename({
       suffix: '.min'
     }))
-    // .pipe(gzip())
     .pipe(gulp.dest('./css'))
     .pipe(browserSync.stream());
 }
@@ -101,7 +91,6 @@ function js_minify() {
   .pipe(rename({
     suffix: '.min'
   }))
-  // .pipe(gzip())
   .pipe(gulp.dest('./js'))
   .pipe(browserSync.stream());
 }
