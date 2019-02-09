@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?qg54ox');
-  src:  url('fonts/icomoon.eot?qg54ox#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?qg54ox') format('truetype'),
-    url('fonts/icomoon.woff?qg54ox') format('woff'),
-    url('fonts/icomoon.svg?qg54ox#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?y2jxht');
+  src:  url('fonts/icomoon.eot?y2jxht#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?y2jxht') format('truetype'),
+    url('fonts/icomoon.woff?y2jxht') format('woff'),
+    url('fonts/icomoon.svg?y2jxht#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,16 +26,24 @@
 
 .icon-gitlab:before {
   content: "\e901";
-  color: #e24329;
 }
 .icon-bars:before {
   content: "\e900";
+}
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-envelop:before {
+  content: "\e945";
 }
 .icon-arrow-down:before {
   content: "\ea3e";
 }
 .icon-github:before {
   content: "\eab0";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
 }
 .icon-file-pdf:before {
   content: "\eadf";
