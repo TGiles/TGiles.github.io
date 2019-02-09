@@ -318,6 +318,6 @@ i[class*="icon-"] {
   margin-right: 0.25rem;
 }
 
-i[class="icon-arrow-down"] {
+a[href="#about"] i {
   margin: 0;
 }

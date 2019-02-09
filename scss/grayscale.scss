@@ -303,6 +303,8 @@ img::-moz-selection {
 i[class*="icon-"] {
     margin-right: $base-25;
 }
-i[class="icon-arrow-down"] {
-    margin: 0;
+a[href="#about"] {
+    i {
+        margin: 0;
+    }
 }
