@@ -9,7 +9,7 @@ header {
     display: flex;
     flex-flow: column wrap;
     align-items: flex-end;
-    background-image: url("./background.png");
+    background-image: url("../img/background.png");
     background-position: center;
 }
 .heading-wrap {
@@ -103,7 +103,7 @@ li {
     margin-bottom: 0.75rem;
 }
 
-.fas, .fab {
+.icon-envelop, .icon-phone, .icon-linkedin2 {
     border-radius: 100%;
     padding: 0.75rem;
     background-color: #34C4C8;
