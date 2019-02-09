@@ -95,6 +95,17 @@ function js_minify() {
   .pipe(browserSync.stream());
 }
 
+function icomoon_minify() {
+  return gulp.src([
+    './vendor/icomoon/style.css'
+  ])
+  .pipe(cleanCSS())
+  .pipe(rename({
+    suffix: '.min'
+  }))
+  .pipe(gulp.dest('./vendor/icomoon/'));
+}
+
 function _browserSync(done) {
   browserSync.init({
     server: {
@@ -127,7 +138,7 @@ function watch() {
 var js = gulp.series(js_minify);
 var css = gulp.series(css_compile, css_minify);
 var img = gulp.series(create_responsive_img);
-var build = gulp.series(css, js, vendor);
+var build = gulp.series(css, js, icomoon_minify, vendor);
 var dev = gulp.series(build, gulp.parallel(watch, _browserSync));
 
 exports.css = css;
