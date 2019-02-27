@@ -122,7 +122,7 @@ function _browserSyncReload() {
 function watch() {
   let js_watch = gulp.watch('./js/*.js');
   let scss_watch = gulp.watch('./scss/*.scss', gulp.series(css_compile, css_minify));
-  let html_watch = gulp.watch('./*.html')
+  let html_watch = gulp.watch('./*.html');
   js_watch.on('change', function() {
     js_minify();
   });
