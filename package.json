@@ -27,11 +27,11 @@
     },
     "dependencies": {
         "bootstrap": "4.3.1",
-        "jquery": "3.3.1",
+        "jquery": "^3.4.1",
         "jquery.easing": "^1.4.1"
     },
     "devDependencies": {
-        "browser-sync": "2.26.3",
+        "browser-sync": "^2.26.5",
         "gulp": "^4.0.0",
         "gulp-clean-css": "4.0.0",
         "gulp-gzip": "^1.4.2",
