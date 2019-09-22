@@ -35,7 +35,7 @@
         "gulp": "^4.0.0",
         "gulp-clean-css": "4.0.0",
         "gulp-gzip": "^1.4.2",
-        "gulp-header": "2.0.1",
+        "gulp-header": "2.0.9",
         "gulp-rename": "^1.2.2",
         "gulp-responsive": "^2.13.0",
         "gulp-sass": "^3.1.0",
