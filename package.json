@@ -32,14 +32,14 @@
     },
     "devDependencies": {
         "browser-sync": "^2.26.7",
-        "gulp": "^4.0.0",
+        "gulp": "^4.0.2",
         "gulp-clean-css": "4.2.0",
         "gulp-gzip": "^1.4.2",
         "gulp-header": "2.0.9",
-        "gulp-rename": "^1.2.2",
-        "gulp-responsive": "^2.13.0",
+        "gulp-rename": "^1.4.0",
+        "gulp-responsive": "^2.14.0",
         "gulp-sass": "^4.0.2",
         "gulp-uglify": "3.0.2",
-        "popper.js": "^1.14.7"
+        "popper.js": "^1.16.0"
     }
 }
