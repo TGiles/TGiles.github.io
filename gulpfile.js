@@ -1,12 +1,12 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var cleanCSS = require('gulp-clean-css');
-var rename = require("gulp-rename");
-var uglify = require('gulp-uglify');
-var responsiveImages = require('gulp-responsive');
-var browserSync = require('browser-sync').create();
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const cleanCSS = require('gulp-clean-css');
+const rename = require("gulp-rename");
+const terser = require('gulp-terser');
+const responsiveImages = require('gulp-responsive');
+const browserSync = require('browser-sync').create();
 
-var cleanCSSobj = {level: {
+const cleanCSSobj = {level: {
   2: {
     all: true
   }
@@ -84,7 +84,7 @@ function js_minify() {
     './js/*.js',
     '!./js/*.min.js'
   ])
-  .pipe(uglify())
+  .pipe(terser())
   .pipe(rename({
     suffix: '.min'
   }))
@@ -132,11 +132,11 @@ function watch() {
   });
 }
 
-var js = gulp.series(js_minify);
-var css = gulp.series(css_compile, css_minify);
-var img = gulp.series(create_responsive_img);
-var build = gulp.series(css, js, icomoon_minify, vendor);
-var dev = gulp.series(build, gulp.parallel(watch, _browserSync));
+const js = gulp.series(js_minify);
+const css = gulp.series(css_compile, css_minify);
+const img = gulp.series(create_responsive_img);
+const build = gulp.series(css, js, icomoon_minify, vendor);
+const dev = gulp.series(build, gulp.parallel(watch, _browserSync));
 
 exports.css = css;
 exports.js = js;
