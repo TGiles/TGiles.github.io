@@ -23,26 +23,34 @@ function vendor(done) {
     '!./node_modules/bootstrap/dist/css/bootstrap-grid*',
     '!./node_modules/bootstrap/dist/css/bootstrap-reboot*'
   ])
-    .pipe(gulp.dest('./dist/vendor/bootstrap'))
+    .pipe(gulp.dest('./dist/vendor/bootstrap'));
 
   // jQuery
   gulp.src([
     './node_modules/jquery/dist/*',
     '!./node_modules/jquery/dist/core.js'
   ])
-    .pipe(gulp.dest('./dist/vendor/jquery'))
+    .pipe(gulp.dest('./dist/vendor/jquery'));
 
   // jQuery Easing
   gulp.src([
     './node_modules/jquery.easing/*.js'
   ])
-    .pipe(gulp.dest('./dist/vendor/jquery-easing'))
+    .pipe(gulp.dest('./dist/vendor/jquery-easing'));
 
+
+  gulp.src([
+    './vendor/icomoon/fonts/icomoon.eot',
+    './vendor/icomoon/fonts/icomoon.svg',
+    './vendor/icomoon/fonts/icomoon.ttf',
+    './vendor/icomoon/fonts/icomoon.woff',
+  ])
+  .pipe(gulp.dest('./dist/vendor/icomoon/fonts'));
   done();
 }
 
 function copy_resume_background(done) {
-  gulp.src('./img/background.png')
+  gulp.src('./img/src/background.png')
     .pipe(gulp.dest('./dist/img'));
   done();
 }
@@ -88,8 +96,8 @@ function resume_styles_compile() {
   .pipe(gulp.dest('./dist/css'));
 }
 
-function create_responsive_img() {
-  return gulp.src('./img/*.jpg')
+function create_responsive_img(done) {
+  gulp.src('./img/src/*.jpg')
     .pipe(responsiveImages({
       '*.jpg': [{
         width: 320,
@@ -107,6 +115,7 @@ function create_responsive_img() {
       ]
     }))
     .pipe(gulp.dest('./dist/img'));
+    done();
 }
 
 function js_minify() {
