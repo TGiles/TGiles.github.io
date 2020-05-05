@@ -3,6 +3,9 @@
     "name": "startbootstrap-grayscale",
     "version": "4.0.0",
     "description": "A grayscale one page HTML theme for Bootstrap.",
+    "scripts": {
+        "start": "gulp dev"
+    },
     "keywords": [
         "css",
         "sass",
