@@ -149,7 +149,7 @@ function _browserSyncReload() {
 function watch() {
   let js_watch = gulp.watch('./js/*.js');
   let scss_watch = gulp.watch('./scss/*.scss', gulp.series(css_compile));
-  let html_watch = gulp.watch('./*.html');
+  let html_watch = gulp.watch('./*.html', gulp.series(copy_src_files));
   js_watch.on('change', function () {
     js_minify();
   });
