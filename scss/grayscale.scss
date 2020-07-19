@@ -53,7 +53,6 @@ a {
 #mainNav {
     font-family: 'Hack', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin-bottom: 0;
-    text-transform: uppercase;
     border-bottom: 1px solid fade-out(white, .7);
     background-color: black;
     .navbar-toggler {
@@ -62,8 +61,14 @@ a {
         color: white;
         border: 1px solid white;
     }
+    .brand-container {
+        background-color: black;
+        text-transform: lowercase;
+    }
     .navbar-brand {
         font-weight: 700;
+        margin-left: 0.50rem;
+        margin-right: 0;
     }
     a {
         color: white;
